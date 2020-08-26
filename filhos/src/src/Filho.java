@@ -7,22 +7,23 @@ import java.util.Random;
 public class Filho {
 
     private Random random = new Random();
-    private String[] sexos;
+    private String[] sexos = new String[] {"boy", "girl"};
+
     private String sexo;
     private String nome;
 
     public Filho(String nome) {
-        sexos = new String[] {"boy", "girl"};
         this.sexo = sexos[random.nextInt(2)];
         this.nome = nome;
     }
 
-    //"sexo" means sex
+    //"sexo" means sex.
     public String getSexo() {
-        return sexo;
+        return this.sexo;
     }
 
+    //"nome" means name.
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 }

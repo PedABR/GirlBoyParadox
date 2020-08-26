@@ -11,7 +11,7 @@ public class Familia {
 
     private Filho[] filhos;
     //possible names for the children... yes, i'm not that creative.
-    private String[] nomes = new String[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
+    public String[] nomes = new String[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
 
     public Familia() {
         filhos = new Filho[2];
@@ -26,11 +26,15 @@ public class Familia {
         String[] nomes1 = new String[9];
         for (String nome1:this.nomes) {
             if (!nome1.equals(nome)) {
-                nomes[i] = nome1;
+                nomes1[i] = nome1;
                 i++;
             }
         }
         this.nomes = nomes1;
+    }
+
+    public String[] getNomes() {
+        return nomes;
     }
 
     public Filho getFilho(int i) {
